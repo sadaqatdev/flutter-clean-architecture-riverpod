@@ -19,6 +19,7 @@ class LoginUserRemoteDataSource implements LoginUserDataSource {
         '/auth/login',
         data: user.toJson(),
       );
+
       return eitherType.fold(
         (exception) {
           return Left(exception);

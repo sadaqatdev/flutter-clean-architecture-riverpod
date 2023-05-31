@@ -19,7 +19,7 @@ class LoginScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(authStateNotifierProvider);
     ref.listen(
-      authStateNotifierProvider.select((value) => value),
+      authStateNotifierProvider,
       ((previous, next) {
         //show Snackbar on failure
         if (next is Failure) {

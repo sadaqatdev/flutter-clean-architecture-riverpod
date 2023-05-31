@@ -10,6 +10,7 @@ import 'package:flutter_project/shared/mixins/exception_handler_mixin.dart';
 
 class DioNetworkService extends NetworkService with ExceptionHandlerMixin {
   final Dio dio;
+
   DioNetworkService(this.dio) {
     // this throws error while running test
     if (!kTestMode) {
